@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>10만원빵 독서클럽 공지</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F3F5F7; --surface:#FFFFFF; --ink:#1D2733; --muted:#5C6B7A; --line:#D9DFE5;
+  --accent:#1F5F7A; --accent-ink:#FFFFFF; --warn-bg:#FFF4D6; --warn-line:#E2B84A; --code:#EEF2F5;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#12181F; --surface:#1B242D; --ink:#E8EDF2; --muted:#9AA8B6; --line:#2C3945;
+    --accent:#6FB6D1; --accent-ink:#0E1A22; --warn-bg:#3A3015; --warn-line:#8C7326; --code:#141C23;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#12181F; --surface:#1B242D; --ink:#E8EDF2; --muted:#9AA8B6; --line:#2C3945;
+  --accent:#6FB6D1; --accent-ink:#0E1A22; --warn-bg:#3A3015; --warn-line:#8C7326; --code:#141C23;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.7;font-size:16px}
+main{max-width:640px;margin:0 auto;padding:28px 18px 56px}
+h1{font-family:"Gowun Batang","Noto Serif KR",serif;font-weight:700;font-size:2rem;line-height:1.3;margin:0 0 6px}
+h2{font-family:"Gowun Batang","Noto Serif KR",serif;font-size:1.25rem;margin:0 0 10px}
+.lead{color:var(--muted);margin:0 0 22px}
+.dates{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 22px}
+.chip{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-weight:500;font-size:.95rem}
+section{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 18px 16px;margin:0 0 14px}
+ul{margin:0;padding-left:1.2em}
+li{margin:4px 0}
+.note{color:var(--muted);font-size:.92rem;margin:10px 0 0}
+.money{background:var(--warn-bg);border-color:var(--warn-line)}
+dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px}
+dt{font-weight:700}
+dd{margin:0}
+.acct{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--surface);border:1px dashed var(--warn-line);border-radius:8px;padding:10px 12px;margin-top:12px}
+.acct code{font-family:inherit;font-weight:700;font-size:1.02rem;word-break:keep-all}
+button{font:inherit;cursor:pointer;border:0;border-radius:8px;background:var(--accent);color:var(--accent-ink);padding:8px 16px;font-weight:700;min-height:40px}
+button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+button.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+.tabs{display:flex;gap:8px;margin:0 0 12px}
+.tabs button{flex:1}
+.tabs button[aria-selected="false"]{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+pre{background:var(--code);border:1px solid var(--line);border-radius:8px;padding:14px;margin:0 0 12px;white-space:pre-wrap;word-break:keep-all;font-family:inherit;font-size:.97rem;line-height:1.8;overflow-x:auto}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:999px;font-weight:500;opacity:0;pointer-events:none;transition:opacity .2s}
+.toast.on{opacity:1}
+@media (prefers-reduced-motion: reduce){.toast{transition:none}}
+</style>
+</head>
+<body>
+<main>
+  <h1>10만원빵 독서클럽</h1>
+  <p class="lead">2주에 1권, 끝까지 읽어 봐요.</p>
+  <div class="dates">
+    <span class="chip">10/13 ~ 11/10</span>
+    <span class="chip">2주에 1권, 총 2권</span>
+  </div>
+
+  <section>
+    <h2>독서 규칙</h2>
+    <ul>
+      <li>읽을 책은 각자 자유롭게 정해요.</li>
+      <li>읽다가 다른 책으로 바꿔도 괜찮아요.</li>
+      <li>단, 2주에 1권은 꼭 읽어야 해요.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>인증 방법</h2>
+    <ul>
+      <li><b>진도 인증</b>: 주 2회</li>
+      <li><b>완독 인증</b>: 책 한 권을 끝낼 때마다 후기(800자 이상)와 별점, 별점 이유</li>
+    </ul>
+    <p class="note">진도 인증과 완독 인증은 별도예요. 완독 인증을 했어도 진도 인증은 따로 올려요.</p>
+  </section>
+
+  <section class="money">
+    <h2>참가비 안내</h2>
+    <dl>
+      <dt>금액</dt><dd>10만원</dd>
+      <dt>입금 기한</dt><dd>10/○ (○)까지</dd>
+      <dt>입금자명</dt><dd>본인 이름 그대로</dd>
+      <dt>환급</dt><dd>11/○까지, 조건을 지킨 분께 환급</dd>
+    </dl>
+    <div class="acct">
+      <code id="acct">○○은행 000-0000-000000 (예금주 ○○○)</code>
+      <button class="ghost" data-copy-id="acct">계좌 복사</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>인증 양식</h2>
+    <div class="tabs" role="tablist">
+      <button role="tab" id="tab-p" aria-selected="true" aria-controls="panel">진도 인증</button>
+      <button role="tab" id="tab-c" aria-selected="false" aria-controls="panel">완독 인증</button>
+    </div>
+    <div id="panel" role="tabpanel">
+      <pre id="form"></pre>
+      <button id="copyForm">양식 복사</button>
+      <p class="note" id="formNote"></p>
+    </div>
+  </section>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite">복사했어요</div>
+
+<script>
+var FORMS = {
+  p: {
+    text: ["🏷️ 구분: 진도","📆 주차: ","💌 이름: ","📅 읽은 날짜: ","📚 책 제목: ","⏳ 읽은 분량: ","📝 한 줄 소감: "].join("\n"),
+    note: "예) 읽은 분량: 122-198 / 한 줄 소감은 한 문장이면 충분해요."
+  },
+  c: {
+    text: ["🏷️ 구분: 완독","📆 주차: ","💌 이름: ","📅 완독 날짜: ","📚 책 제목: ","⏳ 총 페이지: ","⭐️ 별점: ","⭐️ 별점 이유(한 줄): ","📝 후기(800자 이상): "].join("\n"),
+    note: "예) 주차: 3-4주차 / 총 페이지: 325p / 별점: 4.0"
+  }
+};
+var current = "p";
+var pre = document.getElementById("form");
+var note = document.getElementById("formNote");
+var tabP = document.getElementById("tab-p");
+var tabC = document.getElementById("tab-c");
+
+function show(key){
+  current = key;
+  pre.textContent = FORMS[key].text;
+  note.textContent = FORMS[key].note;
+  tabP.setAttribute("aria-selected", key === "p" ? "true" : "false");
+  tabC.setAttribute("aria-selected", key === "c" ? "true" : "false");
+}
+tabP.addEventListener("click", function(){ show("p"); });
+tabC.addEventListener("click", function(){ show("c"); });
+
+var toast = document.getElementById("toast");
+var timer;
+function flash(msg){
+  toast.textContent = msg;
+  toast.classList.add("on");
+  clearTimeout(timer);
+  timer = setTimeout(function(){ toast.classList.remove("on"); }, 1600);
+}
+function fallbackCopy(text){
+  var ta = document.createElement("textarea");
+  ta.value = text;
+  ta.setAttribute("readonly", "");
+  ta.style.position = "fixed";
+  ta.style.opacity = "0";
+  document.body.appendChild(ta);
+  ta.select();
+  var ok = false;
+  try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+  document.body.removeChild(ta);
+  return ok;
+}
+function copyText(text){
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(function(){ flash("복사했어요"); }, function(){
+      flash(fallbackCopy(text) ? "복사했어요" : "길게 눌러 직접 복사해 주세요");
+    });
+  } else {
+    flash(fallbackCopy(text) ? "복사했어요" : "길게 눌러 직접 복사해 주세요");
+  }
+}
+document.getElementById("copyForm").addEventListener("click", function(){ copyText(FORMS[current].text); });
+document.querySelector("[data-copy-id]").addEventListener("click", function(e){
+  copyText(document.getElementById(e.currentTarget.getAttribute("data-copy-id")).textContent);
+});
+show("p");
+</script>
+</body>
+</html>
