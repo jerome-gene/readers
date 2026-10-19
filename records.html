@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>지난 기록 · 10만원빵 독서클럽</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<main>
+  <nav class="seg" aria-label="페이지 이동"><a href="index.html">공지</a><a href="records.html" aria-current="page">지난 기록</a></nav>
+  <h1>지난 기록</h1>
+  <p class="lead">닉네임을 입력하면 내 인증 기록만 볼 수 있어요.</p>
+  <section id="login">
+    <h2>내 기록 열기</h2>
+    <div class="row">
+      <input id="nick" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="닉네임" placeholder="닉네임">
+      <button class="ghost" id="peek" type="button">보기</button>
+    </div>
+    <div class="row" style="margin-top:10px"><button id="go" type="button">열기</button></div>
+    <p class="note">받은 닉네임을 그대로 입력해 주세요. 띄어쓰기와 대소문자는 신경 쓰지 않아도 돼요.</p>
+    <div id="msg" class="err" role="alert" hidden></div>
+  </section>
+  <div id="mine" hidden>
+    <div class="row" style="justify-content:space-between"><h2 id="who" style="margin:0"></h2><button class="ghost" id="out" type="button">닫기</button></div>
+    <div class="tabs" id="mtabs" role="tablist" style="margin-top:14px"></div>
+    <div id="rec-panel"></div>
+  </div>
+</main>
+<script src="assets/records.js"></script>
+</body>
+</html>
